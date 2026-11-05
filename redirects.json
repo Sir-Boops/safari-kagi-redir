@@ -1,0 +1,14 @@
+[
+  {
+    "regexFilter": "^https://duckduckgo[.]com/[?]q=([^&#]+)[&#]?.*$",
+    "resourceTypes": [
+      "main_frame"
+    ]
+  },
+  {
+    "regexFilter": "^https://duckduckgo[.]com/[?][^#]*&q=([^&#]+)[&#]?.*$",
+    "resourceTypes": [
+      "main_frame"
+    ]
+  }
+]
