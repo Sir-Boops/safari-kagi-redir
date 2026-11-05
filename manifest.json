@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Kagi Routing Test (handoff)",
+  "version": "0.3.1",
+  "description": "Tests Safari search redirection and fallback blocking.",
+  "permissions": [
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://*.duckduckgo.com/*",
+    "https://kagi.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "routing",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "handoff.html"
+      ],
+      "matches": [
+        "https://duckduckgo.com/*"
+      ]
+    }
+  ]
+}
